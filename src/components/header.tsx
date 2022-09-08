@@ -1,33 +1,53 @@
 import React, {useState} from 'react';
 import {Transition} from "@headlessui/react";
 import {useNavigate} from "react-router-dom";
+import SunIcon from './../assets/sun.svg'
+import MoonIcon from './../assets/moon.svg'
 
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const navigate=useNavigate();
+    const [theme, setTheme] = useState(true);
+    const navigate = useNavigate();
     return (
         <div>
-            <nav className="my-2 bg-blue-50">
+            <nav className="my-2">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-end h-16">
                         <div className="flex items-center">
                             <div className="hidden md:block">
                                 <div className="ml-10 flex items-baseline space-x-4">
-                                    <button onClick={()=>navigate('/')} className="header-btn hover:bg-orange-400 text-white px-3 py-2 rounded-md text-sm font-medium">
+                                    <button onClick={() => navigate('/')}
+                                            className="header-btn hover:bg-orange-400 text-white px-3 py-2 rounded-md text-sm font-medium">
                                         About
                                     </button>
-                                    <button onClick={()=>navigate('/blog')} className="header-btn text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                                    <button onClick={() => navigate('/blog')}
+                                            className="header-btn text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                         Blog
                                     </button>
-                                    <button onClick={()=>navigate('/projects')} className="header-btn text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                                    <button onClick={() => navigate('/projects')}
+                                            className="header-btn text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                         Projects
                                     </button>
-                                    <button onClick={()=>navigate('/contact')} className="header-btn text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                                    <button onClick={() => navigate('/contact')}
+                                            className="header-btn text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                         Contact
                                     </button>
-
-
+                                    {
+                                        theme ? (
+                                            <button onClick={() => setTheme(!theme)}
+                                                         className="header-btn text-gray-500 hover:bg-gray-100 hover:text-white m-auto rounded-md text-sm font-medium">
+                                            <img className={'invert-color'} src={MoonIcon} width={16} height={16}
+                                                 alt=""/>
+                                        </button>
+                                        ) : (
+                                            <button onClick={() => setTheme(!theme)}
+                                                              className="header-btn text-gray-500 hover:bg-gray-100 hover:text-white m-auto rounded-md text-sm font-medium">
+                                            <img className={'invert-color'} src={SunIcon} width={21} height={21}
+                                                 alt=""/>
+                                        </button>
+                                        )
+                                    }
                                 </div>
                             </div>
                         </div>
