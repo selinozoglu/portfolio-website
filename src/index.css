@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html{
+  scroll-behavior: smooth;
+  transition: transform .5s linear;
+}
 body {
+  animation: fadeIn 1.5s;
   background: rgb(241 244 249);
   margin: 0;
   font-family: 'Tajawal', sans-serif;
@@ -13,4 +19,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
