@@ -31,18 +31,18 @@ const Home = () => {
                         <img className={'framed'} width={300} height={300} src={profilePhoto} alt=""/>
                     </div>
                 </div>
-                <div id={'about'}>
-                    <About/>
-                </div>
-                <div id={'blog'}>
-                    <Blog/>
-                </div>
-                <div id={'projects'}>
-                    <Projects/>
-                </div>
-                <div id={'contact'}>
-                    <Contact/>
-                </div>
+                {/*<div id={'about'}>*/}
+                {/*    <About/>*/}
+                {/*</div>*/}
+                {/*<div id={'blog'}>*/}
+                {/*    <Blog/>*/}
+                {/*</div>*/}
+                {/*<div id={'projects'}>*/}
+                {/*    <Projects/>*/}
+                {/*</div>*/}
+                {/*<div id={'contact'}>*/}
+                {/*    <Contact/>*/}
+                {/*</div>*/}
             </div>
         </div>
     );

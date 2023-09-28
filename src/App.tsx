@@ -7,12 +7,16 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import Projects from "./pages/projects";
 import Header from "./components/header";
+import {useDispatch} from "react-redux";
+import TestingComp from "./components/testComponents/testing-comp/testing-comp";
 
 function App() {
+    // const dispatch = useDispatch();
     return (
         <Router>
             <Header/>
             <div className="App bg-b" id="wave">
+               <TestingComp/>
                 <Routes>
                     <Route path={`/`} element={<Home/>}/>
                     <Route path={`/blog`} element={<Blog/>}/>

@@ -9,20 +9,20 @@ import {useDispatch, useSelector} from 'react-redux';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
-    const dispatch: any = useDispatch();
-    const counter: any = useSelector((state: any) => state.counter)
-    let theme: any = useSelector((state: any) => state.theme)
+    // const dispatch: any = useDispatch();
+    // const counter: any = useSelector((state: any) => state.counter)
+    // let theme: any = useSelector((state: any) => state.theme)
 
     const lightTheme = () => {
-        dispatch({type: 'lightTheme'})
+        // dispatch({type: 'lightTheme'})
         // console.log(theme, 'themethemetheme')
     }
     const darkTheme = () => {
-        dispatch({type: 'darkTheme'})
+        // dispatch({type: 'darkTheme'})
         // console.log(theme, 'themethemetheme')
     }
     const decrementHandler = () => {
-        dispatch({type: 'decrement'})
+        // dispatch({type: 'decrement'})
     }
 
 
@@ -33,7 +33,7 @@ const Header = () => {
                     <div className="flex items-center justify-end h-16">
                         <div className="flex items-center">
                             <button onClick={() => decrementHandler()}>-</button>
-                            <span>{counter}</span>
+                            {/*<span>{counter}</span>*/}
                             {/*<button onClick={()=>incrementHandler()}>+</button>*/}
 
                             <div className="hidden md:block">
@@ -42,21 +42,21 @@ const Header = () => {
                                     <a href="#blog" className="header-btn text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
                                     <a href="#projects" className="header-btn text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
                                     <a href="#contact" className="header-btn text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                                    {
-                                        theme ? (
-                                            <button onClick={() => darkTheme()}
-                                                    className="header-btn text-gray-500 hover:bg-gray-100 hover:text-white m-auto rounded-md text-sm font-medium">
-                                                <img className={'invert-color'} src={MoonIcon} width={16} height={16}
-                                                     alt=""/>
-                                            </button>
-                                        ) : (
-                                            <button onClick={() => lightTheme()}
-                                                    className="header-btn text-gray-500 hover:bg-gray-100 hover:text-white m-auto rounded-md text-sm font-medium">
-                                                <img className={'invert-color'} src={SunIcon} width={21} height={21}
-                                                     alt=""/>
-                                            </button>
-                                        )
-                                    }
+                                    {/*{*/}
+                                    {/*    theme ? (*/}
+                                    {/*        <button onClick={() => darkTheme()}*/}
+                                    {/*                className="header-btn text-gray-500 hover:bg-gray-100 hover:text-white m-auto rounded-md text-sm font-medium">*/}
+                                    {/*            <img className={'invert-color'} src={MoonIcon} width={16} height={16}*/}
+                                    {/*                 alt=""/>*/}
+                                    {/*        </button>*/}
+                                    {/*    ) : (*/}
+                                    {/*        <button onClick={() => lightTheme()}*/}
+                                    {/*                className="header-btn text-gray-500 hover:bg-gray-100 hover:text-white m-auto rounded-md text-sm font-medium">*/}
+                                    {/*            <img className={'invert-color'} src={SunIcon} width={21} height={21}*/}
+                                    {/*                 alt=""/>*/}
+                                    {/*        </button>*/}
+                                    {/*    )*/}
+                                    {/*}*/}
                                 </div>
                             </div>
                         </div>
